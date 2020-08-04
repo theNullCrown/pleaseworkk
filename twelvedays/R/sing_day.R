@@ -21,7 +21,7 @@ sing_day <- function(dataset, line, phrase_col){
   x <- paste("\nOn the",english::ordinal(line), "day of Christmas, my true love sent to me,")
 
   if (line == 1) {
-    x <- paste(x, phrases[1], sep ="\n")
+    x <- paste(x, phrases[line], sep ="\n")
   }
   else {
     z <- map_chr(line:2, ~paste0( y, phrases[.x], ", ", sep ="\n")) %>% str_c(collapse ="")
