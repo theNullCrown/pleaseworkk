@@ -11,5 +11,12 @@ test_that("make a phrase", {
                             adjective = "",
                             location = ""), "ten lords a-leaping" )
 
+  expect_equal( make_phrase(num = 10,
+                            num_word = "five",
+                            item = "ring",
+                            verb = "a-leaping",
+                            adjective = "",
+                            location = ""), "five rings a-leaping" )
+
 
 })
