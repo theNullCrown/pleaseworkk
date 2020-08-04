@@ -19,12 +19,13 @@ sing_day <- function(dataset, line, phrase_col){
   phrases <- dataset %>% pull({{phrase_col}})
 
   x <- paste("\nOn the",english::ordinal(line), "day of Christmas, my true love sent to me,")
+  y <- ""
 
   if (line == 1) {
     x <- paste(x, phrases[line], sep ="\n")
   }
   else {
-    z <- map_chr(line:2, ~paste0( y, phrases[.x], ", ", sep ="\n")) %>% str_c(collapse ="")
+    z <- map_chr(line:2, ~paste0(y, phrases[.x], ", ", sep ="\n")) %>% str_c(collapse ="")
     z <- paste(z, "and", phrases[1])
     x <- paste(x,z, sep ="\n")
   }
