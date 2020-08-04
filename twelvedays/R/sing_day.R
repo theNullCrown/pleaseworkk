@@ -22,7 +22,7 @@ sing_day <- function(dataset, line, phrase_col){
   y <- ""
 
   if (line == 1) {
-    x <- paste(x, phrases[line], sep ="\n")
+    x <- paste(x, phrases[1], sep ="\n")
   }
   else {
     z <- map_chr(line:2, ~paste0(y, phrases[.x], ", ", sep ="\n")) %>% str_c(collapse ="")
