@@ -20,7 +20,7 @@ sing_day <- function(dataset, line, phrase_col){
 
   x <- paste("\nOn the",english::ordinal(line), "day of Christmas, my true love sent to me,")
 
-  if (lain == 1) {
+  if (line == 1) {
     x <- paste(x, phrases[1], sep ="\n")
   }
   else {
